@@ -4,31 +4,33 @@
 
     </title>
     <head>
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>     
     </head>
     <body>
+    <header>
+    </header>
+    <main>        
     <div class="container">
         <div class="row">
-            <div class="col s3">
-                <div id="color-box">
-                    <input type="color" class="color">
-                    <div id="white" class="color">Eraser</div>
-                </div>
-            </div>
-            <div class="col s9">
+            <div id="main-content" class="col s12 offset-2 z-depth-2 blue-grey darken-4">
                 <nav>
-                    <div class="nav-wrapper">
-                    <a href="#" class="brand-logo">Pixel Art</a>
-                    </div>
+                <div class="nav-wrapper blue-grey">
+                <a href="#" class="brand-logo center"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><input type="color" class="color"></li>
+                <li></li>
+                </ul>
+                </div>
                 </nav>
-                <div id="pixel-container">     
+                <div id="pixel-container" class="z-depth-3 blue-grey lighten-3">     
                 </div>
             </div>
         </div>
     </div>
-        <script src="index.js"></script>
+    </main>
+    <script src="index.js"></script>
     </body>
 </html>

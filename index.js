@@ -1,10 +1,11 @@
 $(document).ready(makeBox())
 
 function makeBox(){
-    for (i = 0; i < 2640; i++){ 
+    for (i = 0; i < 4992; i++){ 
         let $gridBox = $("<div></div>").css({"width": "10px", 
                 "height": "10px",
                 "outline": "1px solid gray",
+                "background-color": "white",
                 "float": "left"});
         $gridBox.attr("id", i)
         $gridBox.attr("class", "grid")
@@ -13,19 +14,49 @@ function makeBox(){
         }
 };
 
-let colorHold = "black"
-
-$(".grid").click(function(){
-    $(this).css("background-color", colorHold);
-});
+let colorHold = "black";
+let mouseDown = false;
 
 $(".color").change(function(){
-    colorHold = this.value
-    console.log(colorHold)
+    colorHold = this.value;
+    $("#current-color").css("background-color", colorHold);
     return colorHold
+});
+ 
+$(".grid").click(function(){
+$(this).css({"background-color": colorHold,
+                "outline": colorHold});
 })
+.mousedown(function(){
+    mouseDown = true;
 
-$('.tap-target').tapTarget('open');
-$('.tap-target').tapTarget('close');
+})
+.mouseup(function(){
+    mouseDown = false;
+
+})
+.mouseenter(function(){
+    if (mouseDown == true){
+    $(this).css({"background-color": colorHold,
+                "outline": colorHold}); 
+        return
+    } else {
+    return                         
+    }          
+})
+.dblclick(function(){
+    colorHold = $(this).css('background-color');
+    console.log(colorHold)
+
+
+});
+
+           
+           
+
+
+            
+
+
 
 
